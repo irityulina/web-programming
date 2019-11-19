@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            form {
+                margin: 15px;
+                padding: 15px;
+                background: #ccc;
+                min-height: 300px;
+            }
+            #signup input[type="text"] {
+                background: #47de39;
+                font-weight: bold;
+                padding: 10px;
+            }
+            #picture {
+                position: relative;
+            }
+            #picture img {
+                float: left;
+            }
+            #picture select {
+                color: #830303;
+                font-weight: bold;
+            }
+            #picture select option:first-child {
+                font-weight: bold;
+            }
+            #picture input[type="button"] {
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="signup">
+            <span>Имя</span>
+            <input type="text" />
+            <span>Пароль</span>
+            <input type="password" />
+            <input type="button" value="Отправить" />
+        </form>
+        <form id="picture">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/GNOME_Web_logo--2018.svg/1200px-GNOME_Web_logo--2018.svg.png" alt="image" height="300" width="300" />
+            <select name="countries" id="">
+                <option>Россия</option>
+                <option>Германия</option>
+                <option>США</option>
+                <option>Украина</option>
+            </select>
+            <br />
+            <input type="checkbox" /><a href="#signup">Я резидент</a>
+            <br />
+            <input type="button" value="Сохранить" />
+        </form>
+    </body>
+</html>
