@@ -133,14 +133,14 @@
             let trs = document.querySelectorAll(`#tableWrap tr`);
             if (document.querySelector(`#rmTr`).value >= trs.length) alert("Wrong row number!");
             else {
-                let tr = trs[document.querySelector(`#rmTr`).value];
+                let tr = trs[document.querySelector(`#rmTr`).value - 1];
                 tr.parentNode.removeChild(tr);
             }
         }
 
         function makeMagic() {
             let tds = document.querySelectorAll(`#tableWrap td`);
-            let td = tds[Math.floor(Math.random() * tds.length)];
+            let td = tds[Math.floor(Math.random() * tds.length) - 1];
 
             if (!tds.length) return;
 
@@ -157,9 +157,9 @@
         }
 
         function randColor() {
-            let r = Math.floor(Math.random() * 256);
-            let g = Math.floor(Math.random() * 256);
-            let b = Math.floor(Math.random() * 256);
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
             return `rgb(${r},${g},${b})`;
         }
 
