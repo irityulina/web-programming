@@ -21,7 +21,7 @@ task2_btn = () => {
         .removeAttr(`target`)
         .html(function(index, value) {
             if (value[0] == `↗`) {
-                return value.slice(0, 0) + value.slice(1);
+                return value.slice(1);
             }
             return value;
         });
@@ -38,8 +38,6 @@ $(`.btn-slideToggle`).click(function() {
     $(`table tr:nth-child(4) td:first-child p`).slideToggle(1000);
 });
 $(`.btn-animate`).click(function() {
-    console.log(4);
-
     $(`table tr:nth-child(5) td:first-child p`).animate({ fontSize: "2em" });
 });
 $(`.btn-hide`).click(function() {
